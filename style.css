@@ -1,0 +1,57 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: black;
+}
+
+.gallery {
+    width: 50vw;
+    height: 80vh;
+    overflow: hidden;
+    position: relative;
+    background-color: black; /* 照片牆背景 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: none;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 50%);
+    border-radius: 5px;
+}
+
+h1{
+    width: 30%; /* 文字區域的寬度 */
+    color: white;
+    font-family: 'Georgia', serif;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.photo:first-child {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        width: 50vw;
+        height: 50vh;
+        padding: 10px;
+    }
+
+    h1 {
+        width: 100%;
+        height: 10%; /* 文字區域 */
+        padding: 10px;
+        font-size: 1rem; /* 調整字體大小以適應手機 */
+    }
+}
